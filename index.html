@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+WELCOME USER! You've reached the source code for a manual created by STS. If you plan on updating or editing this manual, then you're in the right place!
+
+Before editing any STS manuals, please read through the editing guide at https://sts.doit.wisc.edu/manual-editing-guide and follow all recommendations. It is important that we follow the conventions set in the guide in order to maintain quality and consistency across all of our training materials.
+
+Good luck, and have fun!
+-->
+
+    <head>
+
+        <!-- Manual title -->
+        <title>HTML</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Software manual provided by Software Training for Students at the University of Wisconsin.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' id='uwmadison-fonts-css'  href='https://brand.wisc.edu/content/themes/uw-theme/dist/fonts/uw160/fonts.css?ver=1.1.1' type='text/css' media='all' /><link rel="stylesheet" type="text/css" href="../master-files/css/stylesheet.css">
+        <script src="../master-files/highlight.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="../master-files/smooth-scroll.js"></script>
+        <script src="../master-files/primary-functions.js"></script>
+        <script src="../master-files/ga.js"></script>     
+    </head>
+
+    <body>
+        <!-- begin front page -->
+        <div class="about">
+
+            <div id="coverpage-title">
+                <h1>HTML: Web Design 1</h1>
+                <h2>Structuring Your First Website</h2>
+                <h3><em>Classroom Course Manual</em></h3> </div>
+            <div id="about-page"></div>
+            <!-- end about page -->
+            <!-- page break -->
+            <div class="page-break"></div>
+            <!-- begin outline -->
+            <div id="outline"></div>
+            <!-- end outline -->
+            <!-- page break -->
+        </div>
+        <div class="page-break"></div>
+        <!-- BEGIN MAIN CONTENT -->
+        <section class="topic">
+            <h1 class="no-top-margin">Introduction</h1>
+            <h2>What is HTML?</h2>
+            <p>HTML (Hyper Text Markup Language) is a formatting and markup language that is used to create webpages. HTML is a cornerstone technology on the web; it is the foundation of practically every webpage and website on the internet.</p>
+            <p>The language works by labelling different pieces of content on your webpage with tags. When a web browser opens the webpage, it is able to interpret and differentiate between each piece of content, and display it correctly on the page.</p>
+            
+            <h2>A Brief Note About Web Development</h2>
+            <p>If you are looking to build a fully functioning website from the ground up, there are three main web development languages to learn: HTML, CSS, and JavaScript.</p> 
+            <ul>
+                <li><strong>HTML (HyperText Markup Language)</strong> is for building content and linking to other pages and resources on the internet. At its core, HTML is simply a labeling system for information (like text and images) so that web browsers and other computer systems can interpret and work with it. HTML is the language for web <strong>content</strong>.</li>
+                <li><strong>CSS (Cascading Style Sheets)</strong> is for determining how content gets styled and presented - things like color, layout, size, fonts, etc. CSS is the language for <strong>styling and presentation</strong> of web content.</li>
+                <li><strong>JavaScript</strong> is for adding interactivity and more advanced functionality to a web site. Note that this is different from Java, which is a completely separate and unrelated programming language (that just happens to have the same word in its name). It is the language of <strong>interactivity</strong> on the web.</li>
+            </ul>
+            <p>HTML serves as the starting point for building content for your own website, but <strong>a modern website will take time and practice with all three core languages.</strong></p>
+            <p>If you wish to put together a website <em>without</em> starting from scratch and writing code, services like <a href="https://wordpress.com" target="_blank">Wordpress</a> and <a href="https://squarespace.com">Squarespace</a> are fast and easy ways to create websites using pre-built templates and content. For many people, these services are sufficient, and may be a better option if the goal is to get a web site up and running with minimal fuss.</p>
+            <p>If your goal is to really understand what goes into making a website, this manual is the place to start!</p>
+</section>
+        <div class="page-break"></div>
+        <section class="topic">
+            <h1>Web Technology Overview</h1>
+            <p>Before we dive into working with HTML, it's important to understand the fundamentals of how the web works. So, what happens when you type a website's URL into a web browser? Well, there are many steps that take place, but here's a general idea:</p>
+            <ol>
+                <li>
+                    <p>You type a website's URL into the browser.</p>
+                </li>
+                <li>
+                    <p>The browser uses the internet to look up the IP address of the server where the website is hosted.</p>
+                </li>
+                <li>
+                    <p>The server then transfers the requested data back through the internet to your web browser.</p>
+                </li>
+                <li>
+                    <p>Your web browser then interprets the data and displays it to the screen.</p>
+                </li>
+            </ol>
+            <p>To summarize, when you visit a website, your computer connects to a physical server somewhere in the world using the internet. It then downloads a series of files (HTML, CSS, and JavaScript files) to your computer, and displays them on screen.</p>
+            <div class="centered-image-large border"><img src="images/webtech-diagram.png"></div>
+            <h2>Terminology</h2>
+            <h3>The Internet</h3>
+            <div class="side-image-small"><img src="images/webtech-vocab-1.png"></div>
+            <p>A system of interconnected computer networks used to allow connections between any two computers in the world. These networks use standardized communication protocols to facilitate the exchange of data between millions of computers all around the world.</p>
+            <h3>Server</h3>
+            <p> A server is a computer that is used to hold a website's files and deliver (serve) these files to web browsers when the files are requested. Servers can run almost any operating system (e.g. Windows, Mac, Linux) and have innumerable features to tweak the performance of the webpages they stores. They are often fast and expensive, but in reality, any computer can be used as a web server.</p>
+            <p>Most people, however, don't use their own computers as web servers. Instead, they use services (which can be found online) to host their websites. Some of these services are free to use, while others require a monthly hosting fee. The main benefit of using these services is that they're generally fast, affordable, and easy to set up while requiring little-to-no maintenance on your part.</p>
+            <h3>Web Browser</h3>
+            <p>A web browser (or browser for short) is a software application that takes the raw data from the Internet and converts it into a readable, graphic display (a process called rendering). Web browsers can also take input from the user and transmit it back to the server.</p>
+            <p>Common web browsers include Chrome, Firefox, Internet Explorer, Opera, and Safari. Although these browsers all serve the same purpose, they do have their differences, which can cause data to be displayed in unexpected ways. Throughout this series of courses, (HTML, CSS, etc.) we will be addressing some of these cross-browser issues and exploring a few ways to get around them.</p>
+            <h3>Webpage and Website</h3>
+            <p>A <strong>webpage</strong> is an individual page and/or document of information on the web. A <strong>website</strong> is a collection of related webpages, images, videos, etc.</p>
+        </section>
+        <section class="topic">
+            <h1>Basic HTML Syntax</h1>
+            <h2>Tags and Elements</h2>
+            <p>As a markup language, HTML uses <em>markup tags</em> to describe the contents on the page. These tags can be thought of as key words or descriptors, surrounded by angled brackets. Generally, a tag consists of three parts:</p>
+            <ol>
+                <li>
+                    <p>Start tag (also called the opening tag)</p>
+                </li>
+                <li>
+                    <p>Element content, which is everything between the opening and closing tags</p>
+                </li>
+                <li>
+                    <p>End tag (also called the closing tag)</p>
+                </li>
+            </ol>
+            <p>All three of these parts combined form what's known as an HTML element.</p>
+            <div class="centered-image-large"><img src="images/basics-structure-1.png"></div>
+            <div class="tool-reference">
+                <h3>HTML Tag</h3>
+                <p>Tags (sometimes also called <em>elements</em>) are the building blocks of HTML. They are used to structure a document by identifying what is inside them.</p>
+                <p>The structure for most tags is the following:</p>
+                <pre>
+                    <code>
+&lt;tag&gt;Content&lt;/tag&gt;    
+                    </code>
+                </pre>
+                <p>An opening tag, which is the tag name in angle brackets &lt; &gt;, and a closing tag, which is a forward slash / then the tag name, also inside angle brackets.</p>
+                <p>One notable exception is the &lt;img&gt; tag, which does not have a closing tag.</p>
+
+            </div>
+            <h2>Commonly Used Tags</h2>
+            <p>Below is a table containing a few common content tags in HTML.</p>
+            <table>
+                <tr>
+                    <th>Opening Tag</th>
+                    <th>Closing Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;h1&gt;</span> to <span class="type-text">&lt;h6&gt;</span></td>
+                    <td><span class="type-text">&lt;/h1&gt;</span> to <span class="type-text">&lt;/h6&gt;</span></td>
+                    <td>Headings and subheadings. H1 is the main heading, H2 is the secondary heading, etc.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;p&gt;</span></td>
+                    <td><span class="type-text">&lt;/p&gt;</span></td>
+                    <td>Paragraph text.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;a&gt;</span></td>
+                    <td><span class="type-text">&lt;/a&gt;</span></td>
+                    <td>Anchor, or link to another webpage or file on the web.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;ol&gt;</span></td>
+                    <td><span class="type-text">&lt;/ol&gt;</span></td>
+                    <td>An ordered list with numbers.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;ul&gt;</span></td>
+                    <td><span class="type-text">&lt;/ul&gt;</span></td>
+                    <td>An unordered list with bullet points.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;li&gt;</span></td>
+                    <td><span class="type-text">&lt;/li&gt;</span></td>
+                    <td>A list item nested inside an element such as <span class="type-text">&lt;ol&gt;</span> or <span class="type-text">&lt;ul&gt;</span>.</td>
+                </tr>
+            </table>
+            <h2>Attributes and Values</h2>
+            <p>Within the opening tag of each HTML element, we can assign specific attributes and values, with the structure seen below. Each HTML element can have a vast variety of attributes assigned to it. We will specify their capabilities at a later point.</p>
+            <div class="full-width-image"><img src="images/basics-structure-2.png"></div>
+
+            <div class="tool-reference">
+                <h3>Attributes</h3>
+                <p>Attributes are information <em>about</em> HTML tags/elements. They are important for browser being able to correctly interpret and present the tag, for example including the site being linked to via an &lt;a&gt; tag or the image being presented by an &lt;img&gt; tag</p>
+                <p>They are presented inside the angle-brackets in the opening tag. The attribute name does not take quotes, but the attribute <em>value</em> does have quotes.</p>
+                <p>The following example of an &lt;img&gt; tag has the attribute <span class="highlight-type">src</span>, or image source, with value <span class="highlight-type">screenshot.jpg</span> and the attribute <span class="highlight-type">alt</span>, or alternative text, with value <span class="highlight-type">A Screenshot showing HTML code</span></p>
+                <pre>
+                    <code>
+&lt;img src="screenshot.jpg" alt="A screenshot showing HTML code"&gt;
+                    </code>
+                </pre>
+
+            </div>
+            <h2>Syntax Rules</h2>
+            <p>As with most computer languages, the structure and formatting must be strictly adhered to in order for the computer to interpret it properly. In HTML, there are a few basic guidelines you can follow to make sure all of your code has proper formatting:</p>
+            <p><strong>All tags must be closed.</strong></p>
+            <ul>
+                <li>
+                    <p>Good example: <span class="type-text">&lt;p&gt; some content &lt;/p&gt;</span></p>
+                </li>
+                <li>
+                    <p>Bad example: <span class="type-text">&lt;p&gt; some content</span></p>
+                </li>
+            </ul>
+            <p><strong>Tags must be completely enclosed within each other.</strong></p>
+            <ul>
+                <li>
+                    <p>Good example: <span class="type-text">&lt;p&gt;&lt;a&gt; some content &lt;/a&gt;&lt;/p&gt;</span></p>
+                </li>
+                <li>
+                    <p>Bad example: <span class="type-text">&lt;p&gt;&lt;a&gt; some content &lt;/p&gt;&lt;/a&gt;</span></p>
+                </li>
+            </ul>
+            <p><strong>All tags and attributes must be in lower case.</strong></p>
+            <ul>
+                <li>
+                    <p>Good example: <span class="type-text">&lt;p attribute = "value"&gt; some content &lt;/p&gt;</span></p>
+                </li>
+                <li>
+                    <p>Bad example: <span class="type-text">&lt;P ATTRIBUTE = "value"&gt; some content &lt;/p&gt;</span></p>
+                </li>
+            </ul>
+            <p><strong>All attribute values must be in quotes.</strong></p>
+            <ul>
+                <li>
+                    <p>Good example: <span class="type-text">&lt;p attribute = "value"&gt; some content &lt;/p&gt;</span></p>
+                </li>
+                <li>
+                    <p>Bad example: <span class="type-text">&lt;p attribute = value&gt; some content &lt;/p&gt;</span></p>
+                </li>
+            </ul>
+
+        </section>
+        <section class="topic">
+            <h1>Getting Started</h1>
+            <h2>Root Folder and Site Organization</h2>
+            <p>When creating a website, it is important to stay organized. A disorganized site can quickly become a burden to update and manage. Although everyone has their own organizational methods, the following is highly recommended.</p>
+            <p>A website is a combination of images, videos, HTML/CSS/JavaScript files, and much much more. Every website has what's called a <strong>root folder</strong>, or a directory containing all of the content that builds the website.</p>
+            <p>Before moving on to the next section, <span class="highlight">create a root folder somewhere accessible on your computer to hold all of your website files.</span></p>
+            <div class="centered-image-tiny"><img src="images/gettingstarted-1.png"></div>
+            <p>Inside of this folder, create two more folders. Name the first one <span class="type-text">images</span>, and the second one <span class="type-text">resources</span>. The <span class="type-text">images</span> folder will be used for all pictures found on the website, meanwhile the <span class="type-text">resources</span> folder will contain all of our CSS and JavaScript.</p>
+            <p>Again, this structure is optional, and only a recommendation. If you find a different organizational method works better for you, then use it.</p>
+            <div class="centered-image-small border"><img src="images/gettingstarted-2.png"></div>
+            <h2>Creating Our First File</h2>
+            <p>Since HTML is a computer language, all you need to start writing is a simple text editor, such as Brackets, TextWrangler, TextEdit, or Notepad. When you've written the code, you'll need to save the file as a <span class="type-text">.html</span> file, so it can be opened and viewed by a web browser.</p>
+            <p>We will begin by setting up a workspace in which we can edit and preview our code side-by-side. This process should be similar on Mac and Windows machines alike.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Open a blank document in a text editor of your choice. In our examples, we will be using a program called TextWrangler, which you can find for free online.</p>
+                </li>
+                <li>
+                    <p>In the menu bar at the top of the screen, select <span class="type-text">File > Save As</span>. Name the file <span class="type-text">index.html</span> then save it directly inside your website's root folder. Your root folder should now contain the following:</p>
+                    <div class="centered-image-medium border"><img src="images/gettingstarted-3.png"></div>
+                </li>
+            </ol>
+            <p>Congratulations! You now have your very first HTML file. </p>
+            <h2>Naming Conventions</h2>
+            <p>You may have noticed that we named our file <span class="type-text">index.html</span>. But why this name? Well, there are a few reasons:</p>
+            <ol>
+                <li>
+                    <p>When your web browser downloads your website files from a server, it immediately searches for the first file to open and display. By default, you web browser will look for a file named "index". And so, it is common practice to have your "index" file contain the homepage of your website.</p>
+                </li>
+                <li>
+                    <p>The <span class="type-text">.html</span> extension is necessary for the computer to recognize that the file is an HTML document. In fact, almost every file on your computer has some sort of extension signifying what kind of file it is. For example, pictures typically have a <span class="type-text">.jpg</span> extension, Word documents have a <span class="type-text">.docx</span> extension. etc.</p>
+                </li>
+            </ol>
+            <p> Throughout the process of creating a website, you will accumulate many files within the root folder of your website. It's important that you name your files properly.</p>
+            <p>When naming files, here are a few things you may want to avoid:</p>
+            <ul>
+                <li>
+                    <p>Any sort of strange symbol that is not a letter, dash, or underscore. For example: <span class="type-text">wisc.edu/my|dog's#1*fan!.html</span>.</p>
+                </li>
+                <li>
+                    <p>Overly long or complex names.</p>
+                </li>
+                <li>
+                    <p>Periods that don't denote the file extension: <span class="type-text">wisc.edu/my.files/first.webpage.html</span>.</p>
+                </li>
+                <li>
+                    <p>Spaces within your filename.</p>
+                </li>
+            </ul>
+            <p>Most of these symbols will work if you use them in file names, but in general, they're annoying and will cause you pain at some point in the future. They are easily avoidable, so avoid them.</p>
+            <h2>Setting up a Workspace</h2>
+            <p><span class="highlight">To edit your HTML file, open it with a text editor. To preview your HTML file, open it in a web browser.</span> To open a file using a specific program, right-click on the file, then select <span class="type-text">Open With</span>. This will allow you to choose whether you want to open the HTML file in a web browser or a text editor. </p>
+            <div class="centered-image-medium"><img src="images/gettingstarted-4.png"></div>
+            <p>We recommend that you open the text editor and the web browser side-by-side. This way, you can edit the HTML, save the document, then refresh the web browser to see how the actual webpage looks.</p>
+        </section>
+        <section class="topic">
+            <h1>Document Setup</h1>
+            <p>Now that our website's root folder is ready, and we have created our first HTML file, it's time to begin writing a web page. Every webpage follows a specific outline, or document structure in order for it to be read properly. In this next exercise we will go through step by step, explaining and writing out the document structure necessary for our webpage.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In your text editor, begin by writing the following line at the top of your document:</p> <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                    <p>This statement is a declaration describing what type of document we are writing. When the web browser opens our file, it will see this statement and understand to read it as a regular HTML file.</p>
+                </li>
+                <li>
+                    <p>We will now need to mark the beginning and end of our code in the document. We can do this by enclosing all of our code within the <span class="type-text">&lt;html&gt;</span> tag. The browser will not read any HTML code written outside this tag.</p><pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;/html&gt;</code></pre> </li>
+                <li>
+                    <p>Inside of our <span class="type-text">&lt;html&gt;</span> tags, there are two more sections we would like to add:</p>
+                    <ol>
+                        <li>
+                            <p><strong>Head:</strong> The head contains information about the webpage that is usually not displayed. It is often used for linking external scripts and stylesheets, adding metadata, and changing the title and description of the webpage.</p>
+                        </li>
+                        <li>
+                            <p><strong>Body:</strong> The body holds all of the information that is displayed on the webpage. Any content that is written outside of the body tags will not show up in the browser window.</p>
+                        </li>
+                    </ol>
+                    <p>To add these sections into our document, we can use the <span class="type-text">&lt;head&gt;</span> and <span class="type-text">&lt;body&gt;</span> tags.</p> <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre> </li>
+                <li>
+                    <p>The final piece we will add to our document structure is a <span class="type-text">&lt;title&gt;</span> tag within the head of our document. This will set the title of our webpage.</p> <pre><code>&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt; Title goes here &lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;</code></pre></li>
+            </ol>
+            <p>Congratulations! You have officially structured your first HTML document. Now we are ready to add some content.</p>
+            <div class="page-break"></div>
+        </section>
+        <section class="topic">
+            <h1 class="no-top-margin">Formatting Text</h1>
+            <div class="sidebar-note">
+                <h2>Indentation</h2>
+                <p>You may notice that we write our HTML code with indentation. When the computer reads the code, it ignores all indentation and whitespace outside of elements. We still write our code this way for legibility reasons.</p>
+            </div>
+            <p>Earlier in this manual, we previewed a series of basic HTML tags to add content to our page. In this section, we will utilize these tags to begin building our webpage.</p>
+            <h2>Paragraph Text</h2>
+            <p>The most essential element we can add to our page is basic text. In order to add paragraph text, we can enclose it within the <span class="type-text">&lt;p&gt;</span> tag we saw earlier.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In the body of the document, add some text enclosed by two <span class="type-text">&lt;p&gt;</span> tags. (Remember that <span class="type-text">&lt;p&gt;</span> acts as the opening tag, and <span class="type-text">&lt;/p&gt;</span> acts as the closing tag.</p> <pre><code>&lt;body&gt;
+        &lt;p&gt;Hello world!&lt;/p&gt;
+        &lt;/body&gt;</code></pre> </li>
+                <li>
+                    <p>Save your HTML file, then refresh your browser to see the result. You should now see "Hello world!" displayed in your web browser.</p>
+                    <div class="centered-image-small border"><img src="images/formatting-helloworld.png"></div>
+                </li>
+                <li>
+                    <p>Each <span class="type-text">&lt;p&gt;</span> element in HTML will act as its own paragraph, and space itself accordingly. Continue to add paragraph text to your document, until you have a significant amount of content. If you need filler text to fill the page, look to the file called <span class="type-text">sample-text.txt</span> in the class files.</p>
+                </li>
+            </ol>
+            <h2>Headings</h2>
+            <div class="side-image-large border"><img src="images/formatting-headings.png"></div>
+            <p>Now that we've added some basic content to our page, we want to title and properly mark each section. In HTML we can use the heading tags to create headings and subheadings, for different sections and sub-sections of our website.</p>
+            <p><span class="highlight">There are six different levels of headings we can use, ranging from <span class = "type-text">&lt;h1&gt;</span> to <span class="type-text">&lt;h6&gt;</span></span>. The first three are previewed to the right.</p>
+            <p>Headings are used to establish hierarchy within a webpage. For example, an <span class="type-text">&lt;h1&gt;</span> tag may mark the beginning of a section of content, then a series of <span class="type-text">&lt;h2&gt;</span> tags may be used to mark sub-sections.</p> <pre><code>&lt;h1&gt;Section Title&lt;/h1&gt;
+        &lt;h2&gt;Sub-section Title&lt;/h2&gt;
+        &lt;p&gt;Paragraph text here.&lt;/p&gt;
+        &lt;h2&gt;Sub-section Title&lt;/h2&gt;
+        &lt;p&gt;Paragraph text here.&lt;/p&gt;</code></pre>
+            <p><span class="highlight">Take some time to add a title to the top of your webpage, then add titles for each sub-section of content on your page.</span> When finished, your HTML document should look similar to the following. (Note, the paragraph text is cut off in the preview below.)</p>
+            <div class="centered-image-large"><img src="images/formatting-preview.png"> </div>
+            <h2>Bold, Italics, and Line Breaks</h2>
+            <p>In order to make a specific word, sentence, or paragraph bold, you can surround it with a <span class="type-text">&lt;strong&gt;</span> tag. Likewise, to italicize your text, you may surround it with the <span class="type-text">&lt;em&gt;</span> tag. An example of each are given below.</p> <pre><code>&lt;p&gt;This word is &lt;strong&gt;bold&lt;/strong&gt;.&lt;/p&gt;
+        &lt;p&gt;This word is &lt;em&gt;italisized&lt;/em&gt;.&lt;/p&gt;</code></pre>
+            <p>Within a paragraph of text, you may also add a line break. To do so, you may use the <span class="type-text">&lt;br/&gt;</span> tag. <strong>This tag is unique, because it does not have an opening or a closing.</strong> Instead, it is a singular tag that will break text to a new line wherever it is placed. An example of its use is demonstrated below.</p> <pre><code>&lt;!-- example of break tag --&gt;
+        &lt;p&gt;This is my first line of text, &lt;br/&gt; and this is my second line.&lt;/p&gt;</code></pre>
+        </section>
+        <section class="topic">
+            <h1>Document Structure</h1>
+            <p>With the introduction of HTML5, we received new tags that make it easy to divide our webpage into sections in order to stay more organized and give additional meaning to certain parts of the page. These tags allow us to structure the document, also making it easier for us down the road when we interact with our webpage using CSS and JavaScript.</p>
+            <p>Below is a list of commonly used document structure tags. To find a more comprehensive list, visit the quick reference guide at the end of this manual.</p>
+            <table>
+                <tr>
+                    <th>Opening Tag</th>
+                    <th>Closing Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;header&gt;</span></td>
+                    <td><span class="type-text">&lt;/header&gt;</span></td>
+                    <td>Contains introductory content for a webpage (e.g. banner, navigation), or a section of a page.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;nav&gt;</span></td>
+                    <td><span class="type-text">&lt;/nav&gt;</span></td>
+                    <td>Contains navigation bar, usually linking to other pages.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;aside&gt;</span></td>
+                    <td><span class="type-text">&lt;/aside&gt;</span></td>
+                    <td>Contains content that is tangentially related to the main content of the page, as one would find in a sidebar.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;footer&gt;</span></td>
+                    <td><span class="type-text">&lt;/footer&gt;</span></td>
+                    <td>Contains footer of a page. Typically the footer contains information about the content, such as the author and a copyright statement.</td>
+                </tr>
+            </table>
+            <ol class="instruction-list">
+                <li>
+                    <p>At the top of your webpage, there should be an <span class="type-text">&lt;h1&gt;</span> element that acts as the page title. Surround this element in a <span class="type-text">&lt;header&gt;</span> container.</p>
+                </li>
+                <li>
+                    <p>Inside of the header, add a <span class="type-text">&lt;nav&gt;</span> container. Keep it empty for now, we will utilize it later.</p> <pre><code>&lt;header&gt;
+        &lt;h1&gt;Fuzzy and the Blue Tones&lt;/h1&gt;
+        &lt;nav&gt;&lt;/nav&gt;
+        &lt;/header&gt;</code></pre> </li>
+                <li>
+                    <p>Add a <span class="type-text">&lt;footer&gt;</span> container at the bottom of the body. Feel free to write in the footer with whatever content you wish. We will be utilizing the footer of our website to contain copyright information.</p> <pre><code>&lt;footer&gt;
+        &lt;p&gt;&#38;copy;2017 Fuzzy and the Blue Tones. All rights reserved.&lt;/p&gt;
+        &lt;/footer&gt;</code></pre>
+                    <p>In HTML, some symbols need to be represented using a specific code for that symbol. In the example above, the copyright symbol (&copy;) is written as <span class="type-text">&#38;copy;</span>.</p>
+                </li>
+            </ol>
+        </section>
+        <section class="topic">
+            <h1>Lists and Tables</h1>
+            <h2>Lists</h2>
+            <div class="side-image-medium border"><img src="images/lists-comparison.png">
+                <p>Comparing list styles</p>
+            </div>
+            <p>Lists are an easy way to display information in a nice, structured format. HTML supports two types of lists, <strong>ordered lists</strong> and <strong>unordered lists</strong>. Ordered lists are enumerated, meaning they display with numbers next to each item. Unordered lists use bullet points instead. Let's outline the structure used to make lists.</p>
+            <ul>
+                <li>
+                    <p>The <span class="type-text">&lt;ol&gt;</span> tag is used to begin and end an <em>ordered</em> list.</p>
+                </li>
+                <li>
+                    <p>The <span class="type-text">&lt;ul&gt;</span> tag is used to begin and end an <em>unordered</em> list.</p>
+                </li>
+                <li>
+                    <p>The <span class="type-text">&lt;li&gt;</span> tag is used to contain each individual item within a list.</p>
+                </li>
+            </ul>
+            <p>For further clarity, take a look at the example below.</p> <pre><code>&lt;ul&gt;
+        &lt;li&gt;First list item&lt;/li&gt;
+        &lt;li&gt;Second list item&lt;/li&gt;
+        &lt;li&gt;Third list item&lt;/li&gt;
+        &lt;/ul&gt;</code></pre>
+            <p>Let's go ahead and add a few lists to our webpage to practice.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Near the bottom of the document, but before the footer, add a new section to your webpage. In our example website, we will be adding a section called "Top Songs", to list the most popular songs for our imaginary band.</p>
+                </li>
+                <li>
+                    <p>Add opening and closing <span class="type-text">&lt;ol&gt;</span> tags to begin creating a list.</p> <pre><code>&lt;h2&gt;Top Songs&lt;/h2&gt;
+        &lt;ol&gt;&lt;/ol&gt;</code></pre> </li>
+                <li>
+                    <p>Begin populating the list by adding <span class="type-text">&lt;li&gt;</span> tags for each list item.</p> <pre><code>&lt;h2&gt;Top Songs&lt;/h2&gt;
+        &lt;ol&gt;
+        &lt;li&gt;Illegally Fuzzy&lt;/li&gt;
+        &lt;li&gt;Papa Smurfgrass&lt;/li&gt;
+        &lt;li&gt;Jet Fueled Finish&lt;/li&gt;
+        &lt;li&gt;Monkey in the Banana Stand&lt;/li&gt;
+        &lt;li&gt;The Gettin' Jiggy Jig&lt;/li&gt;
+        &lt;/ol&gt;</code></pre> </li>
+            </ol>
+            <h2>Tables</h2>
+            <p>Much like lists, tables have a unique structure that make them slightly more difficult. We will not actually be adding any tables to our example site, so feel free to skip this section if it is of no interest.</p>
+            <p>We will be re-creating the table below piece-by-piece to learn how to make tables.</p>
+            <div class="centered-image-medium"><img src="images/lists-table.png"></div>
+            <ol class="instruction-list">
+                <li>
+                    <p>Tables open and close with the <span class="type-text">&lt;table&gt;</span> tag. Add these tags to your document to create a table element.</p>
+                </li>
+                <li>
+                    <p>Each row of a table is opened and closed with a <span class="type-text">&lt;tr&gt;</span> tag. Our table has three rows, so add three opening and closing <span class="type-text">&lt;tr&gt;</span>.</p> <pre><code>&lt;table&gt;
+        &lt;tr&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;/tr&gt;
+        &lt;/table&gt;</code></pre> </li>
+                <li>
+                    <p>To add information into specific columns, we can add <span class="type-text">&lt;td&gt;</span> tags inside of each table row. Because we have two columns in our table, add two <span class="type-text">&lt;td&gt;</span> tags inside of each table row tag.</p>
+                    <p>Once this is done, you may populate the table with information.</p><pre><code>&lt;table&gt;
+        &lt;tr&gt;
+            &lt;td&gt;First Name&lt;/td&gt;
+            &lt;td&gt;Favorite Color&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;George&lt;/td&gt;
+            &lt;td&gt;Orange&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Allan&lt;/td&gt;
+            &lt;td&gt;Blue&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;</code></pre></li>
+                <li>
+                    <p>In most tables, the top row acts as a header for the information being displayed. The header (top row) of the table is usually styled differently than the rest of the table for clarity.</p>
+                    <p>In HTML, we can mark a table header by using <span class="type-text">&lt;th&gt;</span> tags instead of <span class="type-text">&lt;td&gt;</span> tags in the top row.</p> <pre><code>&lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Favorite Color&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;George&lt;/td&gt;
+            &lt;td&gt;Orange&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Allan&lt;/td&gt;
+            &lt;td&gt;Blue&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;</code></pre> </li>
+            </ol>
+            <p>Now our table is complete. When previewing in a web browser, it will look different from the example pictured at the top of this section. This is because the table above has a small amount of CSS, or styling applied to it for readability. <strong>HTML simply provides the structure of the table, and CSS is what is used to change it visually.</strong></p>
+        </section>
+        <section class="topic">            
+            <h1>Links</h1>
+            <p>By far, links are one of the most important aspects of a webpage. In fact, links are the only way we can navigate and move between pages on the web. In the website we are building, we will use links in the navigation bar to bounce between multiple pages on our website. First, let's learn how to create links.</p>
+            <h2>Link Structure</h2>
+            <p>Links begin and end with the <span class="type-text">&lt;a&gt;</span> tag.</p> <pre><code>&lt;a&gt;This is my link&lt;/a&gt;</code></pre>
+            <p>However, the format above is incorrect. There is a crucial piece of information we are missing: <em>where will the link take us?</em> The whole point of a link is to move a user from one page to another, and if the link does not have a destination, it cannot take us there.</p>
+            <p>In an earlier section of this manual, we learned that HTML elements can have <strong>attributes and values</strong>. In order to give our link a destination, we can add the <span class="type-text">href</span> (Hypertext Reference) attribute to our element. Take a look at the example below.</p> <pre><code>&lt;a href = "#"&gt;This is my link!&lt;/a&gt;</code></pre>
+            <p>We have successfully added this attribute to our link tag! Great! The value of the attribute is currently a symbol, "#". This is where we place the destination, or the <strong>path</strong> to where we would like to go. For example, if we wanted our link to take us to Google:</p> <pre><code>&lt;a href = "http://google.com"&gt;This is my link!&lt;/a&gt;</code></pre>
+            <h2>Relative and Absolute Referencing</h2>
+            <p>There are two ways we can write references (destinations) for our links, that are crucial to understand: using <strong>relative paths</strong> and <strong>absolute paths</strong>. Both are described in-depth below.</p>
+            <p><strong>Absolute Paths:</strong> These paths point to a specific page or file on the web with zero ambiguity. The path will lead to the same place, no matter what page the user may be on. Examples:</p>
+            <ul>
+                <li>
+                    <p><span class="type-text">http://google.com/about</span></p>
+                </li>
+                <li>
+                    <p><span class="type-text">http://wisc.edu/sts</span></p>
+                </li>
+                <li>
+                    <p><span class="type-text">http://mywebsite.com/absolute-references.html</span></p>
+                </li>
+            </ul>
+            <p><strong>Relative Paths:</strong> These paths lead to a location that is <em>relative</em> to the user's location. Examples:</p>
+            <ul>
+                <li>
+                    <p><span class="type-text">index.html</span></p>
+                </li>
+                <li>
+                    <p><span class="type-text">images/2017/my-photo.jpg</span></p>
+                </li>
+                <li>
+                    <p><span class="type-text">../../documents/my-file.pdf</span></p>
+                </li>
+            </ul>
+            <p>Consider this analogy. If I provide you with GPS coordinates of my exact location, you would be able to find me no matter what your location. GPS coordinates would be an absolute reference to my location.</p>
+            <p>On the other hand, I could give you instructions: <em>To find me, drive for one mile, turn left, then turn right.</em> In this case, the destination is dependent upon the location of the user. This would be a relative reference to my location.</p>
+            <h2>Adding Links</h2>
+            <p>We would now like to put this into practice, and add links to our own website.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>At the bottom of our webpage, before the footer, create a new section. In this section, create a list, then add links inside of each list element.</p>
+                    <p>In the example site we're building, we decided to add links to our band's biggest sponsors.</p> <pre><code>&lt;h2&gt;Sponsors&lt;/h2&gt;
+        &lt;ul&gt;
+        &lt;li&gt;&lt;a href = "http://www.bluegrassmuseum.org/"&gt;Bluegrass Museum&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href = "http://www.spbgma.com/"&gt;SPBGMA&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;</code></pre> </li>
+                <li>
+                    <p>We now want to form a navigation bar at the top of our webpage. Inside the <span class="type-text">&lt;nav&gt;</span> element, create a list and populate it with links, like in the example below. </p><pre><code>&lt;!-- nav bar example --&gt;
+        &lt;ul&gt;
+        &lt;li&gt;&lt;a href = "index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href = "albums.html"&gt;Albums&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href = "tour.html"&gt;Tour&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;</code></pre> </li>
+            </ol>
+            <div class="tool-reference">
+                <h3>Links: &lt;a&gt; tags</h3>
+                <p>To link to another page, you use &lt;a&gt; tags, or <em>anchor tags</em>.<p>
+                <p>Each anchor tag needs an <strong>href</strong> attribute, whose value is the destination for the link, or where the user will go when they click.</p>
+                <p>The text between the opening and closing tags is what will appear as a link.</p>
+                <pre><code>
+&lt;a href="https://examplesite.com"&gt;Link text goes here&lt;/a&gt;
+                </code></pre>
+                <p>To make a link open in a new tab or window when clicked, add the attribute <strong>target</strong> with a value of <strong>"_blank"</strong> (note the underscore).</p>
+            </div>
+        </section>
+        <section class="topic">
+            <h1>Pages</h1>
+            <p>We now want to add new pages for our website. In our navigation bar, we added links to an "Albums" and "Tour" page, so these are the pages we can create.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>In your text editor, navigate to the menu bar and select <span class="type-text">File > New</span>.</p>
+                </li>
+                <li>
+                    <p>Name your file <span class="type-text">albums.html</span>, then save it inside the root folder of your website.</p>
+                </li>
+                <li>
+                    <p>Repeat the same process to create a page titled <span class="type-text">tour.html</span>.</p>
+                </li>
+                <li>
+                    <p>Take some time to populate these HTML files with content with the same structure we used to make our homepage.</p>
+                </li>
+            </ol>
+            <p>Your website's root folder should now look similar to the following:</p>
+            <div class="centered-image-large border"><img src="images/pages-rootfolder.png"></div>
+            <p>Each HTML file now represents a different webpage. In the previous section, we have already written the links to each of these HTML files in our navigation bar. <span class="highlight">Test your navigation bar by clicking between the three different pages.</span></p>
+        </section>
+        <section class="topic">
+            <h1>Images</h1>
+            <div class="sidebar-note">
+                <h2>The Images Folder</h2>
+                <p>The <span class="type-text">images</span> folder we set up in the root folder of our website was merely for organizational purposes; it is not required. Feel free to use whatever organizational structure you want. </p>
+                <p>So long as the image is within your website's folder, and it is linked properly, it will display.</p>
+            </div>
+            <p>The final important topic we'll cover in HTML is adding images. Images are added to your document using a single tag, with no opening or closing. The image tag also has an attribute that will allow us to point to the image's location in our website's root folder.</p>
+
+            <div class="tool-reference">
+                <h3>Images: &lt;img&gt; tags</h3>
+                <p>To embed an image in a page, you use an &lt;img&gt; tag, or <em>image tag</em>.<p>
+                <p>The &lt;img&gt; tag is unusual in that it is one of the only tags that does not need a closing tag - just the opening &lt;img&gt; will display the image on the page.</p>
+                <p>Every image tag needs two attributes:</p>
+                <ol>
+                    <li>
+                        A <strong>src</strong> or <em>source</em> attribute, whose value is the URL (aka web address) for the image.
+                    </li>
+                    <li>An <strong>alt</strong> or <em>alternate text</em> attribute. This is important for accessibility for people using screen readers or with slow data connections. </li>
+                </ol> 
+                <pre><code>
+&lt;img src="https://examplesite.com/image.jpg" alt="Alt text"&gt;
+                </code></pre>
+                <p>The <strong>src</strong> value can be a <em>relative link</em>. For example if you have a folder called <span class="type">images</span> that is in the same place as your HTML file, you could display an image from it using <span class="type">src="images/image-name.jpg"</span> </p>
+            </div>        
+            <ol class="instruction-list">
+                <li>
+                    <p>Find an image by searching online, or by using the image provided in the class files folder.</p>
+                </li>
+                <li>
+                    <p>Place this image into the <span class="type-text">images</span> folder within your website's root folder.</p>
+                </li>
+                <li>
+                    <p>Within the header, directly below the navigation bar, place an image tag and link it to the image in our website's root folder. Our example is given below.</p> <pre><code>&lt;img src = "images/concert.jpg"&gt;</code></pre>
+                    <p>As you can see, we used a <em>relative</em> reference to link our image.</p>
+                </li>
+                <li>
+                    <p>Refresh your web browser to preview the image on your page. Remember that the image will show up at its full size, with zero formatting. We will be able to better position our images using CSS in our next class.</p>
+                </li>
+                <li>
+                    <p>To complete our image tag, there's one more attribute we can add: the alternative text. The <span class="type-text">alt</span> (alternative text) attribute contains a small, written description of the image. It will not show up on your page, however, it will help search engines find your images, and it will also help in the case that the link to your image breaks.</p> <pre><code>&lt;img src = "images/concert.jpg" alt = "Fuzzy and the Blue Tones Concert"&gt;</code></pre> </li>
+            </ol>
+        </section>
+        <section class="topic">
+            <h1>Classes and IDs</h1>
+            <p>One final concept we would like to introduce is the idea of <strong>classes and IDs</strong>. These become very useful when you start incorporating CSS and JavaScript. Essentially, you can think of classes and IDs as labels or descriptors for certain elements in your webpage. <strong>In HTML, every element can be labelled with a class or ID to categorize it.</strong></p>
+            <div class="tool-reference">
+                <h2>HTML Attribute: ID</h2>
+                <p>The ID of an element is the unique identifier for that particular tag. A given ID can be used only once per document, and if multiple IDs are assigned in one document, the browser only recognizes the last element with that ID.</p>
+            </div>
+            <p>Lets look at some examples of elements with classes attached to them.</p> 
+            <pre><code>
+&lt;p class="highlight"&gt;Sample text here&lt;/p&gt;
+&lt;h4 class="highlight"&gt;Sample title here&lt;/h4&gt;
+&lt;div class="highlight"&gt;Sample text here&lt;/div&gt;
+        </code></pre>
+            <p>Each one of these elements has the <span class="type-text">highlight</span> class attached to it. <strong>The name of the class is arbitrary, and you can name your elements whatever you like.</strong> IDs are structured in a very similar way.</p>
+            <div class="tool-reference">
+                <h2>HTML Attribute: Class</h2>
+                <p>Classes are identifiers for HTML elements/tags that can be used on multiple elements in a page. Classes mainly used for styling elements with CSS and for selecting multiple elements with JavaScript.</p>
+                <p>Classes can be used on multiple elements in a document. This is different from the ID attribute, which can only be used once in an HTML document.</p>
+            </div>
+
+            <pre><code>&lt;span id="hidden"&gt;</code></pre>
+            <p>This <span class="type-text">&lt;span&gt;</span> element is labeled with an ID called <span class="type-text">hidden</span>.</p>
+            <p>So, how are classes and IDs useful? When it comes to styling our page using CSS, or writing JavaScript that interacts with our page, we can use them as <strong>selectors</strong>. </p>
+            <p>For example, in CSS you could select every element with the class <span class="type-text">highlight</span> and change it to have a light blue color. Instead of writing code for each individual element, you may select them all at once using the class applied to them. Likewise, you could write JavaScript code that selects the element with the <span class="type-text">hidden</span> ID, and hide it.</p>
+            <div class="good-to-know center">
+                <h2>IDs vs. Classes</h2>
+                <p>The main difference between IDs and classes is that <strong>class tags can be used on to multiple elements</strong> in a single page, while <strong>ID tags can only be used once</strong> on any given .HTML document.</p>
+                <p>If the same ID is re-used multiple times in a document, it is only applied to the last element with that ID.</p>
+            </div>
+        </section>
+        <section class="topic">            
+            <h1>CSS Preview</h1>
+            <p>By the end of this class, you website should look similar to the following:</p>
+            <div class="centered-image-large border"><img src="images/preview-nocss.png"></div>
+            <p>Of course, this site is far from ideal. The next step is to add color, fonts, formatting, and styling to our page in order to make it appealing. We can do this using another web language called CSS, which has been referenced throughout this manual.</p>
+            <p>Just for show, we would like to preview how exactly CSS can change a webpage, and how dramatic of a difference it can make. <span class="highlight">In you class files folder, open up the <span class = "type-text">finished-website-example</span> folder, and open its <span class="type-text">index.html</span> file.</span> You should see something similar to the following: </p>
+            <div class="centered-image-large border"><img src="images/preview-withcss.png"></div>
+            <p>The two sites are exactly the same, only the latter has a small amount of CSS applied to it.</p>
+            <p><strong>To continue building your web development skills, we recommend the following classes/manuals from Software Training for Students:</strong> </p>
+            <ul>
+                <li>
+                    <p>CSS 1</p>
+                </li>
+                <li>
+                    <p>CSS 2</p>
+                </li>
+                <li>
+                    <p>JavaScript 1</p>
+                </li>
+                <li>
+                    <p>Wordpress.com</p>
+                </li>
+            </ul>
+        </section>
+        <section class="topic"><h1>HTML Tag Quick Reference</h1>
+            <p>This section is a reference for commonly used HTML tags, to use as you work on your own website. There are also a number of tags in here that were not discussed during the course, and may be useful to know.</p>
+            <h2>Content Tags</h2>
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;h1&gt;</span> to <span class="type-text">&lt;h6&gt;</span></td>
+                    <td>Headings and subheadings.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;p&gt;</span></td>
+                    <td>Paragraph text.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;a href = "#"&gt;</span></td>
+                    <td>Link.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;ul&gt;</span> and <span class="type-text">&lt;ol&gt;</span></td>
+                    <td>Unordered and ordered lists.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;li&gt;</span></td>
+                    <td>Individual list elements.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;!--</span> and <span class="type-text">--&gt;</span></td>
+                    <td>Comment. Anything in-between these tags is ignored by the computer.</td>
+                </tr>
+            </table>
+            <h2>Container Tags</h2>
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;div&gt;</span></td>
+                    <td>Generic container for a <em>block</em> of content.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;span&gt;</span></td>
+                    <td>Generic container for <em>in-line</em> content.</td>
+                </tr>
+            </table>
+            <h2>Document Structure Tags</h2>
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;html&gt;</span></td>
+                    <td>Opens and closes HTML document.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;head&gt;</span></td>
+                    <td>Contains information about the webpage, like title and metadata.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;body&gt;</span></td>
+                    <td>Contains all content displayed on the webpage.</td>
+                </tr>
+            </table>
+            <h2>Semantic Tags</h2>
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;header&gt;</span></td>
+                    <td>Contains introductory content, such as website name and navigation.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;nav&gt;</span></td>
+                    <td>Contains primary navigation for website.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;main&gt;</span></td>
+                    <td>Contains main content of page.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;aside&gt;</span></td>
+                    <td>Contains content tangentially related to main content, like a sidebar.</td>
+                </tr>
+                <tr>
+                    <td><span class="type-text">&lt;nav&gt;</span></td>
+                    <td>Contains the footer at the bottom of a page.</td>
+                </tr>
+            </table>
+
+        </section>
+        <!-- END MAIN CONTENT -->
+    </body>
+
+</html>
