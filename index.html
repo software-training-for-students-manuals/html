@@ -396,7 +396,7 @@ Good luck, and have fun!
         &lt;/html&gt;</code></pre></li>
             </ol>
              <p> Let's practice using the <span class="type-text">&lt;title&gt;</span> tag</p>
-                 <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/practice-html?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                 <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             
             <p>Congratulations! You have officially structured your first HTML document. Now we are ready to add some content.</p>
             <div class="page-break"></div>
@@ -417,7 +417,7 @@ Good luck, and have fun!
         &lt;/body&gt;</code></pre> 
                     
                     <p>Practice using the paragraph tag</p>
-                    <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/practice-html?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                   <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex2-p-tag?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                 </li>
                 
                 <li>
@@ -439,7 +439,7 @@ Good luck, and have fun!
         &lt;p&gt;Paragraph text here.&lt;/p&gt;</code></pre>
             
             <p>Practice using the heading tags</p>
-            <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/practice-html?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex3-h-tag?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             
             <p><span class="highlight">Take some time to add a title to the top of your webpage, then add titles for each sub-section of content on your page.</span> When finished, your HTML document should look similar to the following. (Note, the paragraph text is cut off in the preview below.)</p>
             <div class="centered-image-large"><img src="images/formatting-preview.png"> </div>
@@ -450,7 +450,7 @@ Good luck, and have fun!
         &lt;p&gt;This is my first line of text, &lt;br/&gt; and this is my second line.&lt;/p&gt;</code></pre>
             
             <p>Practice using Bold, Italics and Break tags</p>
-            <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/practice-html?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+           <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
         </section>
         <section class="topic">
             <h1>Document Structure</h1>
@@ -541,6 +541,9 @@ Good luck, and have fun!
         &lt;li&gt;The Gettin' Jiggy Jig&lt;/li&gt;
         &lt;/ol&gt;</code></pre> </li>
             </ol>
+            <p>Let's practice using the ordered and unordered lists: </p>
+                <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            
             <h2>Tables</h2>
             <p>Much like lists, tables have a unique structure that make them slightly more difficult. We will not actually be adding any tables to our example site, so feel free to skip this section if it is of no interest.</p>
             <p>We will be re-creating the table below piece-by-piece to learn how to make tables.</p>
@@ -588,6 +591,8 @@ Good luck, and have fun!
         &lt;/tr&gt;
         &lt;/table&gt;</code></pre> </li>
             </ol>
+            <p>Let's practice creating a table: </p>
+                <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex6?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             <p>Now our table is complete. When previewing in a web browser, it will look different from the example pictured at the top of this section. This is because the table above has a small amount of CSS, or styling applied to it for readability. <strong>HTML simply provides the structure of the table, and CSS is what is used to change it visually.</strong></p>
         </section>
         <section class="topic">            
@@ -598,6 +603,10 @@ Good luck, and have fun!
             <p>However, the format above is incorrect. There is a crucial piece of information we are missing: <em>where will the link take us?</em> The whole point of a link is to move a user from one page to another, and if the link does not have a destination, it cannot take us there.</p>
             <p>In an earlier section of this manual, we learned that HTML elements can have <strong>attributes and values</strong>. In order to give our link a destination, we can add the <span class="type-text">href</span> (Hypertext Reference) attribute to our element. Take a look at the example below.</p> <pre><code>&lt;a href = "#"&gt;This is my link!&lt;/a&gt;</code></pre>
             <p>We have successfully added this attribute to our link tag! Great! The value of the attribute is currently a symbol, "#". This is where we place the destination, or the <strong>path</strong> to where we would like to go. For example, if we wanted our link to take us to Google:</p> <pre><code>&lt;a href = "http://google.com"&gt;This is my link!&lt;/a&gt;</code></pre>
+            
+            <p>Let's practice using links in our webpage: </p>
+            <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex7?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            
             <h2>Relative and Absolute Referencing</h2>
             <p>There are two ways we can write references (destinations) for our links, that are crucial to understand: using <strong>relative paths</strong> and <strong>absolute paths</strong>. Both are described in-depth below.</p>
             <p><strong>Absolute Paths:</strong> These paths point to a specific page or file on the web with zero ambiguity. The path will lead to the same place, no matter what page the user may be on. Examples:</p>
