@@ -47,9 +47,9 @@ Good luck, and have fun!
             <h1 class="no-top-margin">Introduction</h1>
             <h2>Outcomes and Objectives</h2>
             <p>The following is a brief summary of the outcomes and objectives expected to be achieved by the end of this tutorial on the essentials of HTML:</p>
-            <ol>
+            <ol class="instruction-list">
 		<li>Functioning and role of HTML in building a website</li>
-			<ol type="a">
+			<ol class="instruction-list" type="a">
 				<li>The need to know HTML</li>
                 <li>Writing a simple HTML Document</li>
                 <li>Introduction to the tags used in HTML</li>
@@ -57,73 +57,73 @@ Good luck, and have fun!
                 <li>Learn about other sources that help in making websites that don’t require coding knowledge </li>
 			</ol>
         <li>Different HTML editors and how to use them based on different operating systems</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>Use notepad++ or notepad if on a Windows system</li>
             <li>Use textedit or brackets when on Mac systems</li>
             <li>And learn how to use replit to practice basic HTML tags before diving into detailed examples on the application of HTML</li>
         </ol>
         <li>Basic HTML tags (to be practiced with the help of replit in the manual)</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>In general, usage of common tags like headings, paragraphs, anchor tag, ordered list tag, unordered list tag, etc</li>
         </ol>
         <li>HTML document structure</li>
-        <ol type="a">
+        <ol class="instruction-list"  type="a">
             <li>Standard structure of HTML Page </li>
             <li>Declaration of !DOCTYPE tag</li>
             <li>Difference between head and body tag </li>
             <li>Visibility (i.e what will be seen on the browser and what will not)</li>
         </ol>
         <li>HTML attributes </li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>How to define and identify attributes </li>
             <li>Functioning and usage of attributes such as- alt, src, href and title</li>
         </ol>
         <li>HTML headings </li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>Function and usage of h1 to h6</li>
             <li>Why they have different sizes- role of hierarchy in a html page</li>
         </ol>
         <li>HTML comments</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>How/why/when to use comments </li>
             <li>The comment tag comment </li>
         </ol>
         <li>Formatting text in HTML</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>Differences between the different formatting tags and the usage of: b, strong, i, em, br tags</li>
         </ol>
         <li>Understanding paths</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>What are the different types of path.</li>
             <li>Difference between absolute and relative path</li>
             <li>How to identify them</li>
             <li>When to use them</li>
         </ol>
         <li>Understanding links </li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>How to use them depending on the types of paths implemented</li>
         </ol>
         <li>Inserting images</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>About the alt attribute</li>
             <li>learn to use an image from a link</li>
             <li>learn to Import an image from another folder</li>
             <li>learn to Import an image from the same folder</li>
         </ol>
         <li>Creating lists</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>What are the different types of lists?</li>
             <li>How to implement ordered lists, unordered lists and nested lists</li>
             <li>When to use the different types of list (based on need/requirement) </li>
         </ol>
         <li>Inserting tables (additional material)</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>Adding a table</li>
             <li>Adding a border </li>
             <li>Writing into a table</li>
         </ol>
         <li>Classes and IDs (additional material)</li>
-        <ol type="a">
+        <ol class="instruction-list" type="a">
             <li>Information on what classes and IDs in HTML are and how they are used</li>
         </ol>
         <li>How a website looks with both CSS and JavaScript encoded along with HTML</li>   
@@ -147,7 +147,7 @@ Good luck, and have fun!
         <section class="topic">
             <h1>Web Technology Overview</h1>
             <p>Before we dive into working with HTML, it's important to understand the fundamentals of how the web works. So, what happens when you type a website's URL into a web browser? Well, there are many steps that take place, but here's a general idea:</p>
-            <ol>
+            <ol class="instruction-list">
                 <li>
                     <p>You type a website's URL into the browser.</p>
                 </li>
@@ -162,10 +162,10 @@ Good luck, and have fun!
                 </li>
             </ol>
             <p>To summarize, when you visit a website, your computer connects to a physical server somewhere in the world using the internet. It then downloads a series of files (HTML, CSS, and JavaScript files) to your computer, and displays them on screen.</p>
-            <div class="centered-image-large border"><img src="images/webtech-diagram.png"></div>
+            <div class="centered-image-large border"><img src="images/webtech-diagram.png" alt="an image showing your computer connecting to a web server containing website files of index.html, main.css, and action.js"></div>
             <h2>Terminology</h2>
             <h3>The Internet</h3>
-            <div class="side-image-small"><img src="images/webtech-vocab-1.png"></div>
+            <div class="side-image-small"><img src="images/webtech-vocab-1.png" alt="an image of a triangle with three different circles at the coners of the triangle"></div>
             <p>A system of interconnected computer networks used to allow connections between any two computers in the world. These networks use standardized communication protocols to facilitate the exchange of data between millions of computers all around the world.</p>
             <h3>Server</h3>
             <p> A server is a computer that is used to hold a website's files and deliver (serve) these files to web browsers when the files are requested. Servers can run almost any operating system (e.g. Windows, Mac, Linux) and have innumerable features to tweak the performance of the webpages they stores. They are often fast and expensive, but in reality, any computer can be used as a web server.</p>
@@ -180,7 +180,7 @@ Good luck, and have fun!
             <h1>Basic HTML Syntax</h1>
             <h2>Tags and Elements</h2>
             <p>As a markup language, HTML uses <em>markup tags</em> to describe the contents on the page. These tags can be thought of as key words or descriptors, surrounded by angled brackets. Generally, a tag consists of three parts:</p>
-            <ol>
+            <ol class="instruction-list">
                 <li>
                     <p>Start tag (also called the opening tag)</p>
                 </li>
@@ -192,7 +192,7 @@ Good luck, and have fun!
                 </li>
             </ol>
             <p>All three of these parts combined form what's known as an HTML element.</p>
-            <div class="centered-image-large"><img src="images/basics-structure-1.png"></div>
+            <div class="centered-image-large"><img src="images/basics-structure-1.png" alt="an image that shows how to open and close tags in HTML"></div>
             <div class="tool-reference">
                 <h3>HTML Tag</h3>
                 <p>Tags (sometimes also called <em>elements</em>) are the building blocks of HTML. They are used to structure a document by identifying what is inside them.</p>
@@ -247,7 +247,7 @@ Good luck, and have fun!
             </table>
             <h2>Attributes and Values</h2>
             <p>Within the opening tag of each HTML element, we can assign specific attributes and values, with the structure seen below. Each HTML element can have a vast variety of attributes assigned to it. We will specify their capabilities at a later point.</p>
-            <div class="full-width-image"><img src="images/basics-structure-2.png"></div>
+            <div class="full-width-image"><img src="images/basics-structure-2.png" alt="an image that show how to open tag assigning a specific attribute and value"></div>
 
             <div class="tool-reference">
                 <h3>Attributes</h3>
@@ -307,10 +307,10 @@ Good luck, and have fun!
             <p>When creating a website, it is important to stay organized. A disorganized site can quickly become a burden to update and manage. Although everyone has their own organizational methods, the following is highly recommended.</p>
             <p>A website is a combination of images, videos, HTML/CSS/JavaScript files, and much much more. Every website has what's called a <strong>root folder</strong>, or a directory containing all of the content that builds the website.</p>
             <p>Before moving on to the next section, <span class="highlight">create a root folder somewhere accessible on your computer to hold all of your website files.</span></p>
-            <div class="centered-image-tiny"><img src="images/gettingstarted-1.png"></div>
+            <div class="centered-image-tiny"><img src="images/gettingstarted-1.png" alt="an image showing a folder in a desktop"></div>
             <p>Inside of this folder, create two more folders. Name the first one <span class="type-text">images</span>, and the second one <span class="type-text">resources</span>. The <span class="type-text">images</span> folder will be used for all pictures found on the website, meanwhile the <span class="type-text">resources</span> folder will contain all of our CSS and JavaScript.</p>
             <p>Again, this structure is optional, and only a recommendation. If you find a different organizational method works better for you, then use it.</p>
-            <div class="centered-image-small border"><img src="images/gettingstarted-2.png"></div>
+            <div class="centered-image-small border"><img src="images/gettingstarted-2.png" alt="an image showing two folders images and resources"></div>
             <h2>Creating Our First File</h2>
             <p>Since HTML is a computer language, all you need to start writing is a simple text editor, such as Brackets, TextWrangler, TextEdit, or Notepad. When you've written the code, you'll need to save the file as a <span class="type-text">.html</span> file, so it can be opened and viewed by a web browser.</p>
             <p>We will begin by setting up a workspace in which we can edit and preview our code side-by-side. This process should be similar on Mac and Windows machines alike.</p>
@@ -320,13 +320,13 @@ Good luck, and have fun!
                 </li>
                 <li>
                     <p>In the menu bar at the top of the screen, select <span class="type-text">File > Save As</span>. Name the file <span class="type-text">index.html</span> then save it directly inside your website's root folder. Your root folder should now contain the following:</p>
-                    <div class="centered-image-medium border"><img src="images/gettingstarted-3.png"></div>
+                    <div class="centered-image-medium border"><img src="images/gettingstarted-3.png" alt="an image showing 2 folders and a file"></div>
                 </li>
             </ol>
             <p>Congratulations! You now have your very first HTML file. </p>
             <h2>Naming Conventions</h2>
             <p>You may have noticed that we named our file <span class="type-text">index.html</span>. But why this name? Well, there are a few reasons:</p>
-            <ol>
+            <ol class="instruction-list">
                 <li>
                     <p>When your web browser downloads your website files from a server, it immediately searches for the first file to open and display. By default, you web browser will look for a file named "index". And so, it is common practice to have your "index" file contain the homepage of your website.</p>
                 </li>
@@ -353,7 +353,7 @@ Good luck, and have fun!
             <p>Most of these symbols will work if you use them in file names, but in general, they're annoying and will cause you pain at some point in the future. They are easily avoidable, so avoid them.</p>
             <h2>Setting up a Workspace</h2>
             <p><span class="highlight">To edit your HTML file, open it with a text editor. To preview your HTML file, open it in a web browser.</span> To open a file using a specific program, right-click on the file, then select <span class="type-text">Open With</span>. This will allow you to choose whether you want to open the HTML file in a web browser or a text editor. </p>
-            <div class="centered-image-medium"><img src="images/gettingstarted-4.png"></div>
+            <div class="centered-image-medium"><img src="images/gettingstarted-4.png" alt="an image showing how to open a file"></div>
             <p>We recommend that you open the text editor and the web browser side-by-side. This way, you can edit the HTML, save the document, then refresh the web browser to see how the actual webpage looks.</p>
         </section>
         <section class="topic">
@@ -370,7 +370,7 @@ Good luck, and have fun!
         &lt;/html&gt;</code></pre> </li>
                 <li>
                     <p>Inside of our <span class="type-text">&lt;html&gt;</span> tags, there are two more sections we would like to add:</p>
-                    <ol>
+                    <ol class="instruction-list">
                         <li>
                             <p><strong>Head:</strong> The head contains information about the webpage that is usually not displayed. It is often used for linking external scripts and stylesheets, adding metadata, and changing the title and description of the webpage.</p>
                         </li>
@@ -422,14 +422,14 @@ Good luck, and have fun!
                 
                 <li>
                     <p>Save your HTML file, then refresh your browser to see the result. You should now see "Hello world!" displayed in your web browser.</p>
-                    <div class="centered-image-small border"><img src="images/formatting-helloworld.png"></div>
+                    <div class="centered-image-small border"><img src="images/formatting-helloworld.png" alt="an image saying Hello world" ></div>
                 </li>
                 <li>
                     <p>Each <span class="type-text">&lt;p&gt;</span> element in HTML will act as its own paragraph, and space itself accordingly. Continue to add paragraph text to your document, until you have a significant amount of content. If you need filler text to fill the page, look to the file called <span class="type-text">sample-text.txt</span> in the class files.</p>
                 </li>
             </ol>
             <h2>Headings</h2>
-            <div class="side-image-large border"><img src="images/formatting-headings.png"></div>
+            <div class="side-image-large border"><img src="images/formatting-headings.png" alt="an image showing the three different types of Headings"></div>
             <p>Now that we've added some basic content to our page, we want to title and properly mark each section. In HTML we can use the heading tags to create headings and subheadings, for different sections and sub-sections of our website.</p>
             <p><span class="highlight">There are six different levels of headings we can use, ranging from <span class = "type-text">&lt;h1&gt;</span> to <span class="type-text">&lt;h6&gt;</span></span>. The first three are previewed to the right.</p>
             <p>Headings are used to establish hierarchy within a webpage. For example, an <span class="type-text">&lt;h1&gt;</span> tag may mark the beginning of a section of content, then a series of <span class="type-text">&lt;h2&gt;</span> tags may be used to mark sub-sections.</p> <pre><code>&lt;h1&gt;Section Title&lt;/h1&gt;
@@ -442,7 +442,7 @@ Good luck, and have fun!
             <iframe height="400px" width="100%" src="https://repl.it/@naveenaVS/ex3-h-tag?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             
             <p><span class="highlight">Take some time to add a title to the top of your webpage, then add titles for each sub-section of content on your page.</span> When finished, your HTML document should look similar to the following. (Note, the paragraph text is cut off in the preview below.)</p>
-            <div class="centered-image-large"><img src="images/formatting-preview.png"> </div>
+            <div class="centered-image-large"><img src="images/formatting-preview.png" alt="an image showing how to start using HTML and what tags to use"></div>
             <h2>Bold, Italics, and Line Breaks</h2>
             <p>In order to make a specific word, sentence, or paragraph bold, you can surround it with a <span class="type-text">&lt;b&gt;</span> tag. Likewise, to italicize your text, you may surround it with the <span class="type-text">&lt;i&gt;</span> tag. An example of each are given below.</p> <pre><code>&lt;p&gt;This word is &lt;b&gt;bold&lt;/b&gt;.&lt;/p&gt;
         &lt;p&gt;This word is &lt;i&gt;italisized&lt;/i&gt;.&lt;/p&gt;</code></pre>
@@ -503,7 +503,7 @@ Good luck, and have fun!
         <section class="topic">
             <h1>Lists and Tables</h1>
             <h2>Lists</h2>
-            <div class="side-image-medium border"><img src="images/lists-comparison.png">
+            <div class="side-image-medium border"><img src="images/lists-comparison.png" alt="an image showing list items using numbers and bullet points">
                 <p>Comparing list styles</p>
             </div>
             <p>Lists are an easy way to display information in a nice, structured format. HTML supports two types of lists, <strong>ordered lists</strong> and <strong>unordered lists</strong>. Ordered lists are enumerated, meaning they display with numbers next to each item. Unordered lists use bullet points instead. Let's outline the structure used to make lists.</p>
@@ -547,7 +547,7 @@ Good luck, and have fun!
             <h2>Tables</h2>
             <p>Much like lists, tables have a unique structure that make them slightly more difficult. We will not actually be adding any tables to our example site, so feel free to skip this section if it is of no interest.</p>
             <p>We will be re-creating the table below piece-by-piece to learn how to make tables.</p>
-            <div class="centered-image-medium"><img src="images/lists-table.png"></div>
+            <div class="centered-image-medium"><img src="images/lists-table.png" alt="an image showing a table that shows persons names and their favorite color"></div>
             <ol class="instruction-list">
                 <li>
                     <p>Tables open and close with the <span class="type-text">&lt;table&gt;</span> tag. Add these tags to your document to create a table element.</p>
@@ -682,7 +682,7 @@ Good luck, and have fun!
                 </li>
             </ol>
             <p>Your website's root folder should now look similar to the following:</p>
-            <div class="centered-image-large border"><img src="images/pages-rootfolder.png"></div>
+            <div class="centered-image-large border"><img src="images/pages-rootfolder.png" alt="an image showing three different types of HTML files and two different folders"></div>
             <p>Each HTML file now represents a different webpage. In the previous section, we have already written the links to each of these HTML files in our navigation bar. <span class="highlight">Test your navigation bar by clicking between the three different pages.</span></p>
         </section>
         <section class="topic">
@@ -761,10 +761,10 @@ Good luck, and have fun!
         <section class="topic">            
             <h1>CSS Preview</h1>
             <p>By the end of this class, you website should look similar to the following:</p>
-            <div class="centered-image-large border"><img src="images/preview-nocss.png"></div>
+            <div class="centered-image-large border"><img src="images/preview-nocss.png" alt=" an image of a website without using css"></div>
             <p>Of course, this site is far from ideal. The next step is to add color, fonts, formatting, and styling to our page in order to make it appealing. We can do this using another web language called CSS, which has been referenced throughout this manual.</p>
             <p>Just for show, we would like to preview how exactly CSS can change a webpage, and how dramatic of a difference it can make. <span class="highlight">In you class files folder, open up the <span class = "type-text">finished-website-example</span> folder, and open its <span class="type-text">index.html</span> file.</span> You should see something similar to the following: </p>
-            <div class="centered-image-large border"><img src="images/preview-withcss.png"></div>
+            <div class="centered-image-large border"><img src="images/preview-withcss.png" alt="an image of a website using css"></div>
             <p>The two sites are exactly the same, only the latter has a small amount of CSS applied to it.</p>
             <p><strong>To continue building your web development skills, we recommend the following classes/manuals from Software Training for Students:</strong> </p>
             <ul>
